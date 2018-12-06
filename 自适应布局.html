@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		div{
+			margin:0 auto;
+			text-align:center;
+		}
+		.head,.nav,.footer{
+			height: 60px;
+			background: #ccc;
+			max-width: 960px;
+			max-height:100px;
+			margin-bottom:10px;
+			line-height: 60px;
+		}
+		.img{
+			background-image: url("14.jpg");
+			background-repeat: no-repeat;
+			background-size: cover;
+			max-width:960px;
+			margin-bottom:10px;
+			padding-bottom: 60%;
+		}
+		.text{
+			display: flex;
+			max-width:960px;
+			height:200px;
+			margin-bottom:10px;
+			line-height: 200px;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+		.text1, .text2{
+			max-width: 600px;
+			display: inline-block;
+			line-height: 20px;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			
+		}
+		.text1{
+			flex: 2;
+			background: blue;
+			margin-right: 10px;
+		}
+		.text2{
+			flex: 1;
+			background: pink;
+		}
+		p{
+			transform: translateY(50%);
+		}
+		@media (max-width: 600px){
+			.text{
+				display: block;
+			}
+		}
+		@media (max-width: 600px){
+			.text1{
+				height:100px;
+				max-height:100px;
+				display: block;
+				margin-right: 0;
+				margin-bottom: 10px;
+			}
+			.text2{
+				height:100px;
+				max-height:100px;
+				display: block;
+			}
+		}
+
+	</style>
+</head>
+<body>
+	<div class="head">页头</div>
+	<div class="nav">导航</div>
+	<div class="img"></div>
+	<div class="text">
+		<div class="text1">
+			<p>asdfsdf fsdfs erw wersdf, fesdb ry hr4 r gfdgd er ewrwertrwer trt ggdgaer. fngj 2re 324$f wer. fsgnrjnw rwer t4q, qwef gregteq rqre rfsdgsd.</p></div>
+		<div class="text2"><p>asdfsdf fsdfs erw wersdf, fsdfqwejg, fesdb ry hr4 r gfdgd er ewrwertrwer trt ggdgaer. fngj 2re 324$f wer. fsgnrjnw rwer t4q, qwef gregteq rqre rfsdgsd.</p></div>
+	</div>
+	<div class="footer">页脚</div>
+</body>
+</html>
