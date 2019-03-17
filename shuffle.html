@@ -1,0 +1,49 @@
+<script>
+    var nums = ['A','2','3','4','5','6','7','8','9','10','J','Q','K'];
+    var kinds = ['♥','♦','♣','♠'];
+    var cards = [];
+
+    var playerA = [];
+    var playerB = [];
+    var playerC = [];
+    var bottomCards = [];
+    //组牌
+    function getCards() {
+        for(var i = 0; i < 13; i++){
+            for(var j = 0; j < 4; j++){
+                cards.push({
+                    num: nums[i],
+                    kind: kinds[j]
+                })
+            }
+        }
+        cards.push(
+            { kind: 'king' },
+            { kind: 'queen' }
+        );
+    }
+    
+    //洗牌
+    function shuffle(cards) {
+        for(var i = cards.length - 1; i > 0; i--){
+            var randomIndex = Math.floor(i * Math.random());
+            
+            var temp = cards[i];
+            cards[i] = cards[randomIndex];
+            cards[randomIndex] = temp;
+        }
+    } 
+
+    //发牌
+    function deal(cards){
+        playerA = cards.slice(0, 17);
+        playerB = cards.slice(17, 34);
+        playerC = cards.slice(34, 51);
+        bottomCards = cards.slice(51, 54);
+    }
+    getCards();
+    shuffle(cards);
+    deal(cards);
+    console.log(cards, playerA, playerB, playerC, bottomCards);
+
+</script>
